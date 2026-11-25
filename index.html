@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="ko" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lighthouse Cup — Grand Final · Marlowe Arena</title>
+  <title>라이트하우스 컵 — 결승전 · 말로우 아레나</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,700;1,800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,700;1,800&family=Barlow:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <style>
@@ -38,8 +38,8 @@
       --hud-border: #2C4672;
       --hud-ink: #FAF5EB;
       --hud-muted: #9EB1CE;
-      --font-display: 'Barlow Condensed', sans-serif;
-      --font-body: 'Barlow', sans-serif;
+      --font-display: 'Barlow Condensed', 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+      --font-body: 'Barlow', 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
     }
 
     [data-theme="dark"] {
@@ -1295,21 +1295,21 @@
           </svg>
           <div>
             <div class="prog-kicker">
-              <span>Grand Final</span>
+              <span>결승전</span>
               <span class="prog-kicker-dot"></span>
-              <span>Marlowe Arena</span>
+              <span>말로우 아레나</span>
             </div>
-            <h1 class="prog-title">Lighthouse Cup</h1>
+            <h1 class="prog-title">라이트하우스 컵</h1>
           </div>
         </div>
         <div class="prog-header-actions">
-          <button id="btnSound" class="btn btn-sm" title="Toggle Web Audio Sound">Sound: Off</button>
-          <button id="btnTheme" class="btn btn-sm btn-navy" title="Switch Light / Evening Hall Theme">Evening Hall</button>
+          <button id="btnSound" class="btn btn-sm" title="웹 오디오 사운드 켜기/끄기">사운드: 꺼짐</button>
+          <button id="btnTheme" class="btn btn-sm btn-navy" title="라이트 / 저녁 경기장 테마 전환">저녁 경기장</button>
         </div>
       </div>
       <div class="attack-line-strip">
-        <span class="live-pill"><span class="pulse-dot"></span> <span id="hdrMatchLine">Official Match-Day Programme · Court 1</span></span>
-        <span id="hdrLeagueLine">Women's Premier · Net 2.24 m · Seeded Roster</span>
+        <span class="live-pill"><span class="pulse-dot"></span> <span id="hdrMatchLine">공식 경기일 프로그램 · 코트 1</span></span>
+        <span id="hdrLeagueLine">여자 프리미어 · 네트 2.24 m · 고정 시드 로스터</span>
       </div>
     </header>
 
@@ -1326,15 +1326,15 @@
               <!-- Navy Scoreboard Bug -->
               <div class="hud-bug">
                 <div class="hud-bug-hdr">
-                  <span id="hudSetLabel">SET 1 · BO3</span>
-                  <span id="hudPointFlag" class="hud-point-flag">SET POINT</span>
+                  <span id="hudSetLabel">1세트 · 3판 2선승</span>
+                  <span id="hudPointFlag" class="hud-point-flag">세트 포인트</span>
                 </div>
                 <div class="hud-team-row">
                   <span id="hudServe0" class="hud-serve-dot"></span>
                   <span id="hudKit0" class="hud-kit-chip"></span>
                   <div class="hud-code-wrap">
                     <span id="hudCode0" class="hud-code">MAR</span>
-                    <span id="hudYou0" class="hud-you-tag">YOU</span>
+                    <span id="hudYou0" class="hud-you-tag">내 팀</span>
                   </div>
                   <div id="hudTo0" class="hud-to-pips">
                     <span class="to-pip"></span><span class="to-pip"></span>
@@ -1347,7 +1347,7 @@
                   <span id="hudKit1" class="hud-kit-chip"></span>
                   <div class="hud-code-wrap">
                     <span id="hudCode1" class="hud-code">KST</span>
-                    <span id="hudYou1" class="hud-you-tag" style="display:none">YOU</span>
+                    <span id="hudYou1" class="hud-you-tag" style="display:none">내 팀</span>
                   </div>
                   <div id="hudTo1" class="hud-to-pips">
                     <span class="to-pip"></span><span class="to-pip"></span>
@@ -1358,11 +1358,11 @@
                 <!-- 6-cell rotation diagrams -->
                 <div class="hud-rot-wrap">
                   <div class="rot-mini">
-                    <div class="rot-mini-lbl"><span id="rotLbl0">MAR ROT</span><span>NET ▲</span></div>
+                    <div class="rot-mini-lbl"><span id="rotLbl0">MAR 로테이션</span><span>네트 ▲</span></div>
                     <div id="rotGrid0" class="rot-grid"></div>
                   </div>
                   <div class="rot-mini">
-                    <div class="rot-mini-lbl"><span id="rotLbl1">KST ROT</span><span>NET ▲</span></div>
+                    <div class="rot-mini-lbl"><span id="rotLbl1">KST 로테이션</span><span>네트 ▲</span></div>
                     <div id="rotGrid1" class="rot-grid"></div>
                   </div>
                 </div>
@@ -1371,63 +1371,63 @@
               <!-- Right State Chips & Serve Speed -->
               <div class="hud-right-col">
                 <div class="hud-chips">
-                  <span id="chipState" class="hud-chip live">LIVE</span>
+                  <span id="chipState" class="hud-chip live">생중계</span>
                   <span id="chipSpeed" class="hud-chip">1×</span>
-                  <span id="chipCam" class="hud-chip">TV FOLLOW</span>
+                  <span id="chipCam" class="hud-chip">TV 추적</span>
                 </div>
                 <div id="servePill" class="serve-pill">
-                  <span>SERVE</span>
+                  <span>서브</span>
                   <strong id="serveKmh">92 KM/H</strong>
-                  <span id="serveKind">JUMP</span>
+                  <span id="serveKind">점프</span>
                 </div>
               </div>
             </div>
 
             <!-- Bottom 1-line Live Commentary Strip -->
             <div class="hud-commentary">
-              <span id="hudCommTag" class="hud-comm-tag">LIVE</span>
-              <span id="hudCommText" class="hud-comm-text">Welcome to Marlowe Arena for the Lighthouse Cup Grand Final.</span>
+              <span id="hudCommTag" class="hud-comm-tag">생중계</span>
+              <span id="hudCommText" class="hud-comm-text">라이트하우스 컵 결승전이 열리는 말로우 아레나에 오신 것을 환영합니다.</span>
             </div>
           </div>
 
           <!-- Skewed Orange Event Caption -->
           <div class="event-caption-wrap">
             <div id="eventCaption" class="event-caption">
-              <span id="eventCaptionMain">ACE!</span>
-              <small id="eventCaptionSub">UNTOUCHED DOWN THE LINE</small>
+              <span id="eventCaptionMain">에이스!</span>
+              <small id="eventCaptionSub">라인 따라 터치 없이 꽂았습니다</small>
             </div>
           </div>
 
           <!-- Timeout Banner -->
           <div id="timeoutBanner" class="hud-banner">
-            <span id="timeoutBannerText">TIMEOUT · MARLOWE</span>
+            <span id="timeoutBannerText">타임아웃 · MARLOWE</span>
             <span id="timeoutCountdown" style="color:var(--accent)">5.0s</span>
           </div>
 
           <!-- Aim Mode Banner -->
           <div id="aimBanner" class="hud-banner">
-            <span>AIM MODE: CLICK OPPONENT COURT</span>
-            <button id="btnCancelAim" class="btn btn-sm btn-accent">Cancel</button>
+            <span>조준 모드: 상대 코트를 클릭하세요</span>
+            <button id="btnCancelAim" class="btn btn-sm btn-accent">취소</button>
           </div>
 
           <!-- Video Challenge Ring Countdown Button -->
-          <button id="btnChallengeRing" class="challenge-ring-btn" title="Challenge Line Call (C)">
+          <button id="btnChallengeRing" class="challenge-ring-btn" title="라인 판정 챌린지 (C)">
             <svg class="challenge-ring-svg" viewBox="0 0 36 36">
               <circle cx="18" cy="18" r="14" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="3.5" />
               <circle id="challengeRingArc" cx="18" cy="18" r="14" fill="none" stroke="#FF7D3D" stroke-width="3.5" stroke-dasharray="87.96" stroke-dashoffset="0" />
             </svg>
-            <span>CHALLENGE (C)</span>
+            <span>챌린지 (C)</span>
           </button>
 
           <!-- Video Check Hawk-Eye Overlay -->
           <div id="videoCheckOverlay" class="video-check-overlay">
             <div class="vc-card">
               <div class="vc-header">
-                <span>MARLOWE VIDEO CHECK</span>
-                <span id="vcSubLabel" style="font-size:13px;color:var(--accent)">LINE CALL</span>
+                <span>MARLOWE 비디오 판독</span>
+                <span id="vcSubLabel" style="font-size:13px;color:var(--accent)">라인 판정</span>
               </div>
               <canvas id="vcCanvas" width="390" height="175"></canvas>
-              <div id="vcVerdict" class="vc-verdict">TRACKING BALL...</div>
+              <div id="vcVerdict" class="vc-verdict">공 추적 중...</div>
             </div>
           </div>
         </div>
@@ -1443,23 +1443,23 @@
                 <path d="M2 12 V2 H12" fill="none" stroke="currentColor" stroke-width="2.4" />
                 <path d="M6 12 V6 H12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 1.5" />
               </svg>
-              Match Controls
+              경기 컨트롤
             </span>
-            <span id="lblFormatShort" style="font-size:12px;color:var(--accent)">BEST OF 3</span>
+            <span id="lblFormatShort" style="font-size:12px;color:var(--accent)">3판 2선승</span>
           </h2>
 
           <div class="btn-grid-3">
-            <button id="btnNewMatch" class="btn btn-navy">New (N)</button>
-            <button id="btnSkipCeremony" class="btn">Skip (K)</button>
-            <button id="btnPause" class="btn">Pause</button>
+            <button id="btnNewMatch" class="btn btn-navy">새 경기 (N)</button>
+            <button id="btnSkipCeremony" class="btn">건너뛰기 (K)</button>
+            <button id="btnPause" class="btn">일시정지</button>
           </div>
 
           <div>
             <div class="field-label">
-              <span>Match Speed</span>
+              <span>경기 속도</span>
               <label style="display:inline-flex;align-items:center;gap:5px;cursor:pointer;color:var(--ink)">
                 <input id="chkAutoNext" type="checkbox" style="accent-color:var(--accent)" />
-                <span>Auto-Next</span>
+                <span>자동 다음 경기</span>
               </label>
             </div>
             <div class="btn-grid-4" id="speedGroup">
@@ -1472,33 +1472,33 @@
 
           <div class="setup-grid">
             <div>
-              <div class="field-label">League</div>
+              <div class="field-label">리그</div>
               <select id="selLeague" class="prog-select"></select>
             </div>
             <div>
-              <div class="field-label">Format</div>
+              <div class="field-label">경기 방식</div>
               <select id="selFormat" class="prog-select">
-                <option value="quick15">Quick Set (15)</option>
-                <option value="one25">One Set (25)</option>
-                <option value="bo3" selected>Best of 3</option>
-                <option value="bo5">Best of 5</option>
+                <option value="quick15">퀵 세트 (15점)</option>
+                <option value="one25">단판 세트 (25점)</option>
+                <option value="bo3" selected>3판 2선승</option>
+                <option value="bo5">5판 3선승</option>
               </select>
             </div>
             <div>
-              <div class="field-label">Home Team</div>
+              <div class="field-label">홈 팀</div>
               <select id="selTeam0" class="prog-select"></select>
             </div>
             <div>
-              <div class="field-label">Away Team</div>
+              <div class="field-label">원정 팀</div>
               <select id="selTeam1" class="prog-select"></select>
             </div>
           </div>
 
           <div>
-            <div class="field-label">You Coach</div>
+            <div class="field-label">내가 지휘할 팀</div>
             <div class="btn-grid-2">
-              <button id="btnCoach0" class="btn btn-sm active">Home (MAR)</button>
-              <button id="btnCoach1" class="btn btn-sm">Away (KST)</button>
+              <button id="btnCoach0" class="btn btn-sm active">홈 (MAR)</button>
+              <button id="btnCoach1" class="btn btn-sm">원정 (KST)</button>
             </div>
           </div>
         </section>
@@ -1511,65 +1511,65 @@
                 <path d="M2 12 V2 H12" fill="none" stroke="currentColor" stroke-width="2.4" />
                 <path d="M6 12 V6 H12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 1.5" />
               </svg>
-              Coach Desk
+              감독석
             </span>
             <span id="lblCoachTeam" style="font-size:12px;color:var(--accent)">MARLOWE</span>
           </h2>
 
           <div>
-            <div class="field-label"><span>Serve Tactic</span><span id="lblServeDesc">BALANCED</span></div>
+            <div class="field-label"><span>서브 전술</span><span id="lblServeDesc">균형형</span></div>
             <div class="btn-grid-4" id="serveTacticGroup">
-              <button class="btn btn-sm active" data-serve="float">Float</button>
-              <button class="btn btn-sm" data-serve="jump">Jump</button>
-              <button class="btn btn-sm" data-serve="short">Short</button>
-              <button class="btn btn-sm" data-serve="aggressive">Aggr.</button>
+              <button class="btn btn-sm active" data-serve="float">플로트</button>
+              <button class="btn btn-sm" data-serve="jump">점프</button>
+              <button class="btn btn-sm" data-serve="short">쇼트</button>
+              <button class="btn btn-sm" data-serve="aggressive">공격적</button>
             </div>
           </div>
 
           <div>
-            <div class="field-label"><span>Attack Tactic</span><span id="lblAttackDesc">POWER</span></div>
+            <div class="field-label"><span>공격 전술</span><span id="lblAttackDesc">강타</span></div>
             <div class="btn-grid-5" id="attackTacticGroup">
-              <button class="btn btn-sm active" data-attack="power">Power</button>
-              <button class="btn btn-sm" data-attack="tip">Tip</button>
-              <button class="btn btn-sm" data-attack="line">Line</button>
-              <button class="btn btn-sm" data-attack="cross">Cross</button>
-              <button class="btn btn-sm" data-attack="quick">Quick</button>
+              <button class="btn btn-sm active" data-attack="power">강타</button>
+              <button class="btn btn-sm" data-attack="tip">팁</button>
+              <button class="btn btn-sm" data-attack="line">라인</button>
+              <button class="btn btn-sm" data-attack="cross">크로스</button>
+              <button class="btn btn-sm" data-attack="quick">속공</button>
             </div>
           </div>
 
           <div>
-            <div class="field-label"><span>Block System</span><span id="lblBlockDesc">READ</span></div>
+            <div class="field-label"><span>블로킹 방식</span><span id="lblBlockDesc">리드</span></div>
             <div class="btn-grid-2" id="blockTacticGroup">
-              <button class="btn btn-sm active" data-block="read">Read Block</button>
-              <button class="btn btn-sm" data-block="commit">Commit Block</button>
+              <button class="btn btn-sm active" data-block="read">리드 블록</button>
+              <button class="btn btn-sm" data-block="commit">커밋 블록</button>
             </div>
           </div>
 
           <div class="btn-grid-2">
-            <button id="btnAim" class="btn">Aim Attack (A)</button>
-            <button id="btnTimeout" class="btn">Timeout (T) · 2</button>
+            <button id="btnAim" class="btn">조준 공격 (A)</button>
+            <button id="btnTimeout" class="btn">타임아웃 (T) · 2</button>
           </div>
 
           <div style="display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--ink-muted)">
-            <span id="lblAimStatus">Next aim: Auto tactical</span>
-            <span id="lblChalCount" class="condensed" style="font-weight:700;color:var(--ink)">Challenges: 2/2</span>
+            <span id="lblAimStatus">다음 조준: 자동 전술</span>
+            <span id="lblChalCount" class="condensed" style="font-weight:700;color:var(--ink)">챌린지: 2/2</span>
           </div>
 
           <!-- Substitution Sub-panel -->
           <div style="border-top:1px dashed var(--border-soft);padding-top:8px;display:flex;flex-direction:column;gap:6px">
             <div class="field-label" style="margin:0">
-              <span>Substitution</span>
-              <span id="lblSubCount">2 / 2 LEFT</span>
+              <span>선수 교체</span>
+              <span id="lblSubCount">2 / 2 남음</span>
             </div>
             <div>
-              <div style="font-size:11px;color:var(--ink-muted);margin-bottom:3px">1. Out (Court):</div>
+              <div style="font-size:11px;color:var(--ink-muted);margin-bottom:3px">1. 나갈 선수 (코트):</div>
               <div id="subCourtChips" class="sub-chip-list"></div>
             </div>
             <div>
-              <div style="font-size:11px;color:var(--ink-muted);margin-bottom:3px">2. In (Bench):</div>
+              <div style="font-size:11px;color:var(--ink-muted);margin-bottom:3px">2. 들어올 선수 (벤치):</div>
               <div id="subBenchChips" class="sub-chip-list"></div>
             </div>
-            <button id="btnConfirmSub" class="btn btn-sm btn-navy" disabled>Confirm Substitution</button>
+            <button id="btnConfirmSub" class="btn btn-sm btn-navy" disabled>교체 확정</button>
           </div>
         </section>
 
@@ -1581,36 +1581,36 @@
                 <path d="M2 12 V2 H12" fill="none" stroke="currentColor" stroke-width="2.4" />
                 <path d="M6 12 V6 H12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 1.5" />
               </svg>
-              Arena &amp; Floor
+              경기장 &amp; 바닥
             </span>
           </h2>
 
           <div>
-            <div class="field-label"><span>Hall Lights (L)</span><span id="lblLightMode">DAY</span></div>
+            <div class="field-label"><span>경기장 조명 (L)</span><span id="lblLightMode">낮</span></div>
             <div class="btn-grid-3" id="lightsGroup">
-              <button class="btn btn-sm active" data-light="day">Day</button>
-              <button class="btn btn-sm" data-light="evening">Evening</button>
-              <button class="btn btn-sm" data-light="show">Show</button>
+              <button class="btn btn-sm active" data-light="day">낮</button>
+              <button class="btn btn-sm" data-light="evening">저녁</button>
+              <button class="btn btn-sm" data-light="show">쇼</button>
             </div>
           </div>
 
           <div>
-            <div class="field-label"><span>Court Surface (S)</span><span id="lblFloorMode">MAPLE</span></div>
+            <div class="field-label"><span>코트 바닥 (S)</span><span id="lblFloorMode">메이플</span></div>
             <div class="btn-grid-4" id="floorGroup">
-              <button class="btn btn-sm active" data-floor="maple">Maple</button>
-              <button class="btn btn-sm" data-floor="taraflex">Taraflex</button>
-              <button class="btn btn-sm" data-floor="parquet">Parquet</button>
-              <button class="btn btn-sm" data-floor="rubber">Rubber</button>
+              <button class="btn btn-sm active" data-floor="maple">메이플</button>
+              <button class="btn btn-sm" data-floor="taraflex">타라플렉스</button>
+              <button class="btn btn-sm" data-floor="parquet">파르케</button>
+              <button class="btn btn-sm" data-floor="rubber">고무</button>
             </div>
           </div>
 
           <div class="gauges-row">
             <div class="gauge-box">
-              <div class="gauge-hdr"><span>Bounce</span><span id="valBounce">80%</span></div>
+              <div class="gauge-hdr"><span>탄성</span><span id="valBounce">80%</span></div>
               <div class="gauge-track"><div id="fillBounce" class="gauge-fill" style="width:80%"></div></div>
             </div>
             <div class="gauge-box">
-              <div class="gauge-hdr"><span>Squeak</span><span id="valSqueak">78%</span></div>
+              <div class="gauge-hdr"><span>마찰음</span><span id="valSqueak">78%</span></div>
               <div class="gauge-track"><div id="fillSqueak" class="gauge-fill" style="width:78%"></div></div>
             </div>
           </div>
@@ -1624,32 +1624,32 @@
                 <path d="M2 12 V2 H12" fill="none" stroke="currentColor" stroke-width="2.4" />
                 <path d="M6 12 V6 H12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 1.5" />
               </svg>
-              Camera &amp; Pixel Art
+              카메라 &amp; 픽셀 아트
             </span>
           </h2>
 
           <div class="btn-grid-4" id="camGroup">
             <button class="btn btn-sm active" data-cam="follow">1 TV</button>
-            <button class="btn btn-sm" data-cam="hall">2 Hall</button>
-            <button class="btn btn-sm" data-cam="closeup">3 Close</button>
-            <button id="btnCamReset" class="btn btn-sm">Reset</button>
+            <button class="btn btn-sm" data-cam="hall">2 경기장</button>
+            <button class="btn btn-sm" data-cam="closeup">3 근접</button>
+            <button id="btnCamReset" class="btn btn-sm">초기화</button>
           </div>
 
           <div>
-            <div class="field-label"><span>Pixel Size</span><span id="lblPixelSize">2 PX</span></div>
+            <div class="field-label"><span>픽셀 크기</span><span id="lblPixelSize">2 PX</span></div>
             <div class="slider-row">
               <input id="rngPixelSize" type="range" min="1" max="6" step="1" value="2" />
             </div>
           </div>
 
           <div class="btn-grid-3">
-            <button id="btnOutlines" class="btn btn-sm active">Outlines</button>
-            <button id="btnDither" class="btn btn-sm active">Dither</button>
-            <button id="btnRaw3D" class="btn btn-sm">Raw 3D</button>
+            <button id="btnOutlines" class="btn btn-sm active">윤곽선</button>
+            <button id="btnDither" class="btn btn-sm active">디더링</button>
+            <button id="btnRaw3D" class="btn btn-sm">원본 3D</button>
           </div>
 
           <div class="kbd-hint">
-            Drag turn · Wheel/pinch zoom · Shift/Right-drag pan · <kbd>Q</kbd><kbd>E</kbd> turn · <kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> cam · <kbd>R</kbd> reset · <kbd>Space</kbd> pause · <kbd>N</kbd> new · <kbd>K</kbd> skip · <kbd>T</kbd> timeout · <kbd>C</kbd> challenge · <kbd>A</kbd> aim · <kbd>S</kbd> floor · <kbd>L</kbd> lights
+            드래그 회전 · 휠/핀치 확대 · Shift/오른쪽 드래그 이동 · <kbd>Q</kbd><kbd>E</kbd> 회전 · <kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> 카메라 · <kbd>R</kbd> 초기화 · <kbd>Space</kbd> 일시정지 · <kbd>N</kbd> 새 경기 · <kbd>K</kbd> 건너뛰기 · <kbd>T</kbd> 타임아웃 · <kbd>C</kbd> 챌린지 · <kbd>A</kbd> 조준 · <kbd>S</kbd> 바닥 · <kbd>L</kbd> 조명
           </div>
         </section>
       </aside>
@@ -1659,8 +1659,8 @@
     <section class="match-centre">
       <div id="resultBanner" class="result-banner">
         <div>
-          <div id="resultBannerMain" class="result-banner-main">LIGHTHOUSE CUP GRAND FINAL · SET 1 UNDERWAY</div>
-          <div id="resultBannerSub" class="result-banner-sub">Marlowe Arena · Official Match Centre</div>
+          <div id="resultBannerMain" class="result-banner-main">라이트하우스 컵 결승전 · 1세트 진행 중</div>
+          <div id="resultBannerSub" class="result-banner-sub">말로우 아레나 · 공식 매치 센터</div>
         </div>
         <div id="resultBannerBadge" class="condensed" style="font-size:18px;font-weight:800;color:var(--accent)">0 — 0</div>
       </div>
@@ -1674,7 +1674,7 @@
                 <path d="M2 12 V2 H12" fill="none" stroke="currentColor" stroke-width="2.4" />
                 <path d="M6 12 V6 H12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 1.5" />
               </svg>
-              Set-by-Set Scoreboard
+              세트별 스코어보드
             </span>
           </h2>
           <div class="table-scroll">
@@ -1686,7 +1686,7 @@
               <svg class="court-corner-glyph" viewBox="0 0 14 14" aria-hidden="true">
                 <path d="M2 12 V2 H12" fill="none" stroke="currentColor" stroke-width="2.4" />
               </svg>
-              Top Performers
+              활약 선수
             </span>
           </h3>
           <div id="topPerformersBox" class="perf-grid"></div>
@@ -1699,9 +1699,9 @@
                 <path d="M2 12 V2 H12" fill="none" stroke="currentColor" stroke-width="2.4" />
                 <path d="M6 12 V6 H12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 1.5" />
               </svg>
-              Match Statistics
+              경기 통계
             </span>
-            <span id="statTeamsHdr" style="font-size:12px;color:var(--ink-muted)">MAR vs KST</span>
+            <span id="statTeamsHdr" style="font-size:12px;color:var(--ink-muted)">MAR 대 KST</span>
           </h2>
           <div id="comparisonStatsBox"></div>
         </div>
@@ -1715,9 +1715,9 @@
               <path d="M2 12 V2 H12" fill="none" stroke="currentColor" stroke-width="2.4" />
               <path d="M6 12 V6 H12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 1.5" />
             </svg>
-            Live Commentary Feed
+            실시간 중계 피드
           </span>
-          <span style="font-size:12px;color:var(--ink-muted)">NEWEST FIRST</span>
+          <span style="font-size:12px;color:var(--ink-muted)">최신순</span>
         </h2>
         <div id="commentaryFeed" class="comm-feed"></div>
       </div>
@@ -1731,7 +1731,7 @@
                 <path d="M2 12 V2 H12" fill="none" stroke="currentColor" stroke-width="2.4" />
                 <path d="M6 12 V6 H12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 1.5" />
               </svg>
-              <span id="rosterHdr0">Home Roster</span>
+              <span id="rosterHdr0">홈 로스터</span>
             </span>
           </h2>
           <div class="table-scroll">
@@ -1746,7 +1746,7 @@
                 <path d="M2 12 V2 H12" fill="none" stroke="currentColor" stroke-width="2.4" />
                 <path d="M6 12 V6 H12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2 1.5" />
               </svg>
-              <span id="rosterHdr1">Away Roster</span>
+              <span id="rosterHdr1">원정 로스터</span>
             </span>
           </h2>
           <div class="table-scroll">
@@ -1757,8 +1757,8 @@
     </section>
 
     <footer class="prog-footer">
-      <span><strong>LIGHTHOUSE CUP</strong> · Official Match-Day Programme · Marlowe Arena</span>
-      <span>Real 3D Orthographic Geometry · 90-Colour OKLab Dithered Pixel Pipeline · Seeded Invented Rosters</span>
+      <span><strong>라이트하우스 컵</strong> · 공식 경기일 프로그램 · 말로우 아레나</span>
+      <span>실제 3D 직교 지오메트리 · 90색 OKLab 디더링 픽셀 파이프라인 · 가상의 고정 시드 로스터</span>
     </footer>
   </div>
 
@@ -1859,25 +1859,25 @@
     // --- Court Surface Definitions ---
     const FLOOR_TYPES = {
       maple: {
-        key: 'maple', label: 'Maple',
+        key: 'maple', label: '메이플',
         bounce: 0.80, squeak: 0.78, speedMod: 1.00,
         courtBase: '#DAA973', courtAlt: '#C9955E', freeZone: '#185D78', lineColor: '#FCF9F2', attackColor: '#E85A1B',
         style: 'planks'
       },
       taraflex: {
-        key: 'taraflex', label: 'Taraflex',
+        key: 'taraflex', label: '타라플렉스',
         bounce: 0.72, squeak: 0.92, speedMod: 0.97,
         courtBase: '#E87A3C', courtAlt: '#DF7034', freeZone: '#1B4E84', lineColor: '#FCF9F2', attackColor: '#FCF9F2',
         style: 'matte'
       },
       parquet: {
-        key: 'parquet', label: 'Parquet',
+        key: 'parquet', label: '파르케',
         bounce: 0.86, squeak: 0.68, speedMod: 1.03,
         courtBase: '#C4915E', courtAlt: '#A87648', freeZone: '#236644', lineColor: '#FCF9F2', attackColor: '#E85A1B',
         style: 'parquet'
       },
       rubber: {
-        key: 'rubber', label: 'Rubber',
+        key: 'rubber', label: '고무',
         bounce: 0.66, squeak: 0.44, speedMod: 0.94,
         courtBase: '#2F7D6C', courtAlt: '#297061', freeZone: '#1B3052', lineColor: '#F3EAD9', attackColor: '#F5D24E',
         style: 'speckle'
@@ -1887,10 +1887,10 @@
 
     // --- Format Definitions ---
     const FORMATS = {
-      quick15: { key: 'quick15', label: 'Quick Set (15)', short: 'SET TO 15', setsToWin: 1, regularTarget: 15, deciderTarget: 15, maxSets: 1 },
-      one25:   { key: 'one25',   label: 'One Set (25)',   short: 'SET TO 25', setsToWin: 1, regularTarget: 25, deciderTarget: 25, maxSets: 1 },
-      bo3:     { key: 'bo3',     label: 'Best of 3',      short: 'BEST OF 3', setsToWin: 2, regularTarget: 25, deciderTarget: 15, maxSets: 3 },
-      bo5:     { key: 'bo5',     label: 'Best of 5',      short: 'BEST OF 5', setsToWin: 3, regularTarget: 25, deciderTarget: 15, maxSets: 5 }
+      quick15: { key: 'quick15', label: '퀵 세트 (15점)', short: '15점 선취', setsToWin: 1, regularTarget: 15, deciderTarget: 15, maxSets: 1 },
+      one25:   { key: 'one25',   label: '단판 세트 (25점)',   short: '25점 선취', setsToWin: 1, regularTarget: 25, deciderTarget: 25, maxSets: 1 },
+      bo3:     { key: 'bo3',     label: '3판 2선승',      short: '3판 2선승', setsToWin: 2, regularTarget: 25, deciderTarget: 15, maxSets: 3 },
+      bo5:     { key: 'bo5',     label: '5판 3선승',      short: '5판 3선승', setsToWin: 3, regularTarget: 25, deciderTarget: 15, maxSets: 5 }
     };
 
     // --- Seeded Leagues, Teams & 12-Player Rosters ---
@@ -1920,7 +1920,7 @@
     const LEAGUE_SPECS = [
       {
         id: 'womens',
-        name: "Women's Premier",
+        name: '여자 프리미어',
         netHeight: 2.24,
         serveBaseKmh: 76,
         spikeScale: 0.94,
@@ -1935,7 +1935,7 @@
       },
       {
         id: 'mens',
-        name: "Men's Premier",
+        name: '남자 프리미어',
         netHeight: 2.43,
         serveBaseKmh: 96,
         spikeScale: 1.06,
@@ -2038,53 +2038,54 @@
     const LEAGUES = buildSeededLeagues();
 
     // --- Varied Commentary Phrasing Engine ---
+    const KIND_KO = { power: '강타', tip: '팁', line: '라인', cross: '크로스', quick: '속공' };
     const COMM_TEMPLATES = {
       ace: [
-        '{p} rifles a {kmh} km/h serve straight onto the baseline — untouched ace!',
-        'Pure placement from {p}! The {kind} serve drops cleanly between passers for an ace.',
-        '{p} clips the sideline at {kmh} km/h! Nothing the {opp} back row could do.',
-        'Booming ace from {p} — Marlowe Arena erupts as the ball skids off the court.'
+        '{p} 선수의 {kmh} km/h 서브가 베이스라인 위에 꽂힙니다. 터치 없는 에이스!',
+        '{p} 선수의 절묘한 코스 선택! {kind} 서브가 리시버 사이에 깔끔하게 떨어져 에이스가 됩니다.',
+        '{p} 선수가 {kmh} km/h로 사이드라인을 스칩니다! {opp} 팀 후위는 손쓸 방법이 없었습니다.',
+        '{p} 선수의 폭발적인 에이스! 공이 코트를 스치며 튀어나가자 말로우 아레나가 들썩입니다.'
       ],
       kill: [
-        '{p} climbs above the tape and hammers a {kind} kill to the open floor!',
-        'Crisp tempo! {p} threads the seam of the block for a decisive {team} point.',
-        '{p} unloads off the {kind} approach — thunderous finish inside the three-metre line!',
-        'Smart vision from {p}, painting the deep corner with a clean {kind} winner.',
-        'High hands, clean contact — {p} puts it away for {team}!'
+        '{p} 선수가 네트 위로 솟구쳐 {kind} 킬을 빈 코트에 꽂아 넣습니다!',
+        '깔끔한 타이밍! {p} 선수가 블록 사이 틈을 뚫고 {team} 팀의 결정적인 득점을 만듭니다.',
+        '{p} 선수가 {kind} 스윙을 터뜨립니다. 3미터 라인 안쪽으로 천둥 같은 마무리!',
+        '{p} 선수의 영리한 시야, 깊은 코너를 노린 깔끔한 {kind} 위너입니다.',
+        '높은 손, 깨끗한 타점. {p} 선수가 {team} 팀의 득점으로 마무리합니다!'
       ],
       tip: [
-        'Velvet touch by {p}! A disguised tip floats softly behind the leaping blockers.',
-        '{p} spots the empty campfire and feathers a cheekily soft dink over the net.',
-        'Deception at the antenna — {p} changes pace with a clever roll shot.'
+        '{p} 선수의 부드러운 터치! 위장한 팁이 뛰어오른 블로커 뒤로 사뿐히 떨어집니다.',
+        '{p} 선수가 빈 공간을 보고 네트 너머로 능청스럽게 살짝 밀어 넣습니다.',
+        '안테나 근처의 속임수! {p} 선수가 영리한 롤 샷으로 템포를 바꿉니다.'
       ],
       block: [
-        'ROOFED! {p} shuts the door right on the net tape — monstrous stuff block!',
-        'Two-hand brick wall from {p}! The ball drops straight back at the attacker’s feet.',
-        'Read like a book! {p} presses over the net and turns the attack straight down.',
-        'Denied at the summit — {p} seals the seam for {team}!'
+        '벽입니다! {p} 선수가 네트 바로 위에서 문을 닫아버립니다. 어마어마한 스터프 블록!',
+        '{p} 선수의 두 손 철벽! 공이 그대로 공격수의 발 앞에 떨어집니다.',
+        '완벽하게 읽었습니다! {p} 선수가 네트 위로 손을 넘겨 공격을 그대로 내리꽂습니다.',
+        '꼭대기에서 막혔습니다. {p} 선수가 {team} 팀을 위해 틈을 봉쇄합니다!'
       ],
       serveErr: [
-        '{p} pushes the {kind} serve just long past the end line — free point to {opp}.',
-        'Into the net cord from {p}; the aggressive serve fails to clear the tape.',
-        '{p} misses wide off the service line, handing side-out to {opp}.'
+        '{p} 선수의 {kind} 서브가 엔드라인을 살짝 넘어갑니다. {opp} 팀에 공짜 득점.',
+        '{p} 선수의 서브가 네트 상단에 걸립니다. 공격적인 서브가 네트를 넘지 못했습니다.',
+        '{p} 선수가 서비스 라인에서 옆으로 빗나가며 {opp} 팀에 사이드아웃을 내줍니다.'
       ],
       attackOut: [
-        '{p} swings hard down the line, but the ball sails millimetres wide — out!',
-        'Too much heat from {p} — the strike carries past the back boundary.',
-        'Line judge raises the flag! {p}’s swing lands just outside the chalk.'
+        '{p} 선수가 라인을 따라 강하게 휘두르지만 공이 아슬아슬하게 밖으로 나갑니다. 아웃!',
+        '{p} 선수의 힘이 너무 들어갔습니다. 공이 엔드라인 뒤로 넘어갑니다.',
+        '선심이 깃발을 듭니다! {p} 선수의 스윙이 라인 바로 바깥에 떨어집니다.'
       ],
       netTouch: [
-        'Whistle from the stand! {p} clips the top tape on the follow-through — net fault.',
-        'Into the mesh! {p} can’t clear the net and {opp} collect the point.'
+        '휘슬이 울립니다! {p} 선수가 팔로스루 중 네트 상단을 건드렸습니다. 네트 터치 반칙.',
+        '네트에 걸렸습니다! {p} 선수가 네트를 넘기지 못해 {opp} 팀이 득점합니다.'
       ],
       digError: [
-        'Valiant diving effort by {p}, but the deflected shot skids away off the platform.',
-        '{p} gets a glove to the missile, yet it spins out into the free zone.'
+        '{p} 선수의 다이빙 디그가 투혼을 보였지만 공이 팔에 튕겨 멀리 굴러갑니다.',
+        '{p} 선수가 강타에 손을 갖다 댔지만 공이 회전하며 프리 존으로 빠져나갑니다.'
       ]
     };
 
     function pickCommentary(rng, type, vars) {
-      const list = COMM_TEMPLATES[type] || ['Point scored.'];
+      const list = COMM_TEMPLATES[type] || ['득점!'];
       let str = list[Math.floor(rng() * list.length)];
       for (const k in vars) {
         str = str.replaceAll(`{${k}}`, vars[k]);
@@ -2276,18 +2277,18 @@
     ];
 
     const SERVE_TACTICS = {
-      float:      { label: 'Float',      speedMul: 0.90, errProb: 0.052, aceBonus: 0.00, flutter: 0.38, extraG: 0.0,  jump: false, short: false, desc: 'STEADY FLUTTER' },
-      jump:       { label: 'Jump',       speedMul: 1.14, errProb: 0.095, aceBonus: 0.032,flutter: 0.06, extraG: 2.2,  jump: true,  short: false, desc: 'HIGH VELOCITY' },
-      short:      { label: 'Short',      speedMul: 0.78, errProb: 0.064, aceBonus: 0.014,flutter: 0.24, extraG: 0.4,  jump: false, short: true,  desc: 'DROP FRONT ZONE' },
-      aggressive: { label: 'Aggressive', speedMul: 1.22, errProb: 0.132, aceBonus: 0.052,flutter: 0.10, extraG: 2.8,  jump: true,  short: false, desc: 'MAX RISK / LINES' }
+      float:      { label: '플로트',      speedMul: 0.90, errProb: 0.052, aceBonus: 0.00, flutter: 0.38, extraG: 0.0,  jump: false, short: false, desc: '안정적 플로팅' },
+      jump:       { label: '점프',       speedMul: 1.14, errProb: 0.095, aceBonus: 0.032,flutter: 0.06, extraG: 2.2,  jump: true,  short: false, desc: '고속 서브' },
+      short:      { label: '쇼트',      speedMul: 0.78, errProb: 0.064, aceBonus: 0.014,flutter: 0.24, extraG: 0.4,  jump: false, short: true,  desc: '전위 존 떨구기' },
+      aggressive: { label: '공격적', speedMul: 1.22, errProb: 0.132, aceBonus: 0.052,flutter: 0.10, extraG: 2.8,  jump: true,  short: false, desc: '최대 위험 / 라인 공략' }
     };
 
     const ATTACK_TACTICS = {
-      power: { label: 'Power', speed: 19.2, errProb: 0.075, tip: false, desc: 'HEAVY SWING' },
-      tip:   { label: 'Tip',   speed: 9.8,  errProb: 0.035, tip: true,  desc: 'SOFT DINK' },
-      line:  { label: 'Line',  speed: 18.4, errProb: 0.092, tip: false, desc: 'SIDELINE SEAM' },
-      cross: { label: 'Cross', speed: 18.8, errProb: 0.068, tip: false, desc: 'SHARP ANGLE' },
-      quick: { label: 'Quick', speed: 19.8, errProb: 0.082, tip: false, desc: 'FAST MIDDLE' }
+      power: { label: '강타', speed: 19.2, errProb: 0.075, tip: false, desc: '강력한 스윙' },
+      tip:   { label: '팁',   speed: 9.8,  errProb: 0.035, tip: true,  desc: '부드러운 페이크' },
+      line:  { label: '라인',  speed: 18.4, errProb: 0.092, tip: false, desc: '사이드라인 공략' },
+      cross: { label: '크로스', speed: 18.8, errProb: 0.068, tip: false, desc: '날카로운 각도' },
+      quick: { label: '속공', speed: 19.8, errProb: 0.082, tip: false, desc: '빠른 중앙 공격' }
     };
 
     function rotWorldPos(teamIdx, slotIdx, serving) {
@@ -2417,7 +2418,7 @@
           targetPlayer: null,
           targetPos: { x: 0, y: 0, z: 0 },
           attackKind: 'power',
-          serveKind: 'float',
+          serveKind: '플로트',
           serveKmh: 0,
           intendedOut: false,
           netFaultPlayer: null,
@@ -2480,11 +2481,11 @@
         this.squeakGauge = this.floor.squeak;
 
         this.addCommentary(
-          `Welcome to Marlowe Arena! ${this.teams[0].name} meet ${this.teams[1].name} in the Lighthouse Cup Grand Final (${this.format.label}).`,
+          `말로우 아레나에 오신 것을 환영합니다! ${this.teams[0].name} 팀과 ${this.teams[1].name} 팀이 라이트하우스 컵 결승전(${this.format.label})에서 맞붙습니다.`,
           true
         );
         this.addCommentary(
-          `Coin toss won by ${this.teams[this.servingTeam].name} — they will serve first in Set 1.`,
+          `동전 던지기에서 ${this.teams[this.servingTeam].name} 팀이 이겨 1세트 첫 서브를 넣습니다.`,
           false
         );
 
@@ -2554,7 +2555,7 @@
           return true;
         }
         t.timeoutQueued = true;
-        this.addCommentary(`Coach ${t.coach} signals for a ${t.code} timeout at the next dead ball.`, false);
+        this.addCommentary(`${t.coach} 감독이 다음 데드볼에 ${t.code} 타임아웃을 요청합니다.`, false);
         this.emit('onUiDirty');
         return true;
       }
@@ -2578,8 +2579,8 @@
         this.officials.refSignal = 'timeout';
         this.officials.refTimer = 2.0;
         this.emit('onSound', { type: 'whistle', double: true });
-        this.emit('onCaption', { main: 'TIMEOUT', sub: `${t.name.toUpperCase()} HUDDLE` });
-        this.addCommentary(`Timeout called by ${t.name} (${t.timeoutsLeft} remaining this set). Momentum reset.`, true);
+        this.emit('onCaption', { main: '타임아웃', sub: `${t.name.toUpperCase()} 작전 회의` });
+        this.addCommentary(`${t.name} 팀이 타임아웃을 불렀습니다 (이번 세트 ${t.timeoutsLeft}회 남음). 흐름이 끊깁니다.`, true);
         // Move players toward their bench side
         for (let ti = 0; ti < 2; ti++) {
           const dir = ti === 0 ? 1 : -1;
@@ -2603,7 +2604,7 @@
 
         if (this.phase === 'rally' || this.phase === 'serveToss') {
           t.pendingSub = { outBaseSlot, inRosterIdx };
-          this.addCommentary(`${t.code} prepare substitution: #${inP.number} ${inP.shortName} ready at the sideline.`, false);
+          this.addCommentary(`${t.code} 교체 준비: #${inP.number} ${inP.shortName} 선수가 사이드라인에서 대기합니다.`, false);
           this.emit('onUiDirty');
           return true;
         }
@@ -2621,7 +2622,7 @@
         t.pendingSub = null;
         this.updateLibero(teamIdx);
         this.emit('onSound', { type: 'whistle', double: false });
-        this.addCommentary(`Substitution (${t.code}): #${inP.number} ${inP.name} replaces #${outP.number} ${outP.name}.`, true);
+        this.addCommentary(`선수 교체 (${t.code}): #${inP.number} ${inP.name} 선수가 #${outP.number} ${outP.name} 선수와 교체됩니다.`, true);
         this.emit('onUiDirty');
       }
 
@@ -2656,26 +2657,26 @@
         };
         this.closeCall = null;
         this.emit('onSound', { type: 'whistle', double: true });
-        this.addCommentary(`VIDEO CHECK! ${t.name} challenge the close line call at Marlowe Arena!`, true);
+        this.addCommentary(`비디오 판독! ${t.name} 팀이 아슬아슬한 라인 판정에 챌린지를 신청합니다!`, true);
         this.emit('onVideoCheck', this.videoCheck);
         this.emit('onUiDirty');
         return true;
       }
 
       addCommentary(text, highlight = false) {
-        const stamp = `S${this.setNumber} ${this.points[0]}-${this.points[1]}`;
+        const stamp = `${this.setNumber}세트 ${this.points[0]}-${this.points[1]}`;
         this.commentary.unshift({ stamp, text, highlight });
         if (this.commentary.length > 80) this.commentary.length = 80;
       }
 
       getPointFlag() {
-        if (this.phase === 'matchOver') return 'FINAL';
+        if (this.phase === 'matchOver') return '경기 종료';
         const target = this.getTargetScore();
         for (let ti = 0; ti < 2; ti++) {
           const opp = 1 - ti;
           if (this.points[ti] >= target - 1 && this.points[ti] >= this.points[opp] + 1) {
             const isMatch = this.setsWon[ti] === this.format.setsToWin - 1;
-            return isMatch ? `${this.teams[ti].code} MATCH PT` : `${this.teams[ti].code} SET PT`;
+            return isMatch ? `${this.teams[ti].code} 매치 포인트` : `${this.teams[ti].code} 세트 포인트`;
           }
         }
         return '';
@@ -3561,21 +3562,21 @@
         const flag = this.getPointFlag();
 
         const capMap = {
-          ace:       { main: 'ACE!', sub: `${hitter ? hitter.shortName.toUpperCase() : winTeam.code} · ${meta.serveKmh || 88} KM/H` },
-          kill:      { main: 'KILL!', sub: `${hitter ? hitter.shortName.toUpperCase() : winTeam.code} · ${winTeam.code}` },
-          tip:       { main: 'SOFT TIP!', sub: `${hitter ? hitter.shortName.toUpperCase() : winTeam.code} FINDS OPEN FLOOR` },
-          block:     { main: 'STUFF BLOCK!', sub: `${hitter ? hitter.shortName.toUpperCase() : winTeam.code} SHUTS IT DOWN` },
-          serveErr:  { main: 'SERVE ERROR', sub: `POINT ${winTeam.code}` },
-          attackOut: { main: 'OUT BALL', sub: `POINT ${winTeam.code}` },
-          netTouch:  { main: 'NET FAULT', sub: `POINT ${winTeam.code}` }
+          ace:       { main: '에이스!', sub: `${hitter ? hitter.shortName.toUpperCase() : winTeam.code} · ${meta.serveKmh || 88} KM/H` },
+          kill:      { main: '킬!', sub: `${hitter ? hitter.shortName.toUpperCase() : winTeam.code} · ${winTeam.code}` },
+          tip:       { main: '소프트 팁!', sub: `${hitter ? hitter.shortName.toUpperCase() : winTeam.code} 빈 공간을 찾았습니다` },
+          block:     { main: '스터프 블록!', sub: `${hitter ? hitter.shortName.toUpperCase() : winTeam.code} 완벽 차단` },
+          serveErr:  { main: '서브 범실', sub: `${winTeam.code} 득점` },
+          attackOut: { main: '아웃 볼', sub: `${winTeam.code} 득점` },
+          netTouch:  { main: '네트 터치', sub: `${winTeam.code} 득점` }
         };
 
-        let caption = capMap[reason] || { main: `POINT ${winTeam.code}`, sub: '' };
+        let caption = capMap[reason] || { main: `${winTeam.code} 득점`, sub: '' };
         if (setWon) {
           const matchWillEnd = this.setsWon[winner] + 1 >= this.format.setsToWin;
           caption = matchWillEnd
-            ? { main: `${winTeam.code} CHAMPIONS!`, sub: `LIGHTHOUSE CUP GRAND FINAL` }
-            : { main: `SET ${this.setNumber} · ${winTeam.code}`, sub: `${this.points[0]} — ${this.points[1]}` };
+            ? { main: `${winTeam.code} 우승!`, sub: `라이트하우스 컵 결승전` }
+            : { main: `${this.setNumber}세트 · ${winTeam.code}`, sub: `${this.points[0]} — ${this.points[1]}` };
         } else if (flag && !meta.suppressFlag) {
           caption = { main: flag, sub: `${caption.main} · ${this.points[0]}–${this.points[1]}` };
         }
@@ -3589,10 +3590,10 @@
           team: winTeam.name,
           opp: loseTeam.name,
           kmh: meta.serveKmh || 85,
-          kind: (reason === 'ace' || reason === 'serveErr') ? (meta.serveKind || 'float').toLowerCase() : (meta.attackKind || 'power')
+          kind: (reason === 'ace' || reason === 'serveErr') ? (meta.serveKind || '플로트') : (KIND_KO[meta.attackKind || 'power'] || meta.attackKind)
         });
         this.addCommentary(
-          commText + (bigRally ? ` (${this.rally.contacts}-contact rally!)` : ''),
+          commText + (bigRally ? ` (${this.rally.contacts}터치 랠리!)` : ''),
           reason === 'ace' || reason === 'block' || bigRally || setWon
         );
 
@@ -3617,7 +3618,7 @@
               this.phase = 'matchOver';
               this.autoNextTimer = 6.5;
               this.addCommentary(
-                `MATCH OVER! ${this.teams[ti].name} lift the Lighthouse Cup (${this.setsWon[0]}–${this.setsWon[1]})!`,
+                `경기 종료! ${this.teams[ti].name} 팀이 라이트하우스 컵을 들어 올립니다 (${this.setsWon[0]}–${this.setsWon[1]})!`,
                 true
               );
               this.emit('onUiDirty');
@@ -3626,7 +3627,7 @@
               this.phase = 'setBreak';
               this.phaseTimer = 4.0;
               this.addCommentary(
-                `Set ${this.setNumber} goes to ${this.teams[ti].name} (${this.points[0]}–${this.points[1]}). Short break before Set ${this.setNumber + 1}.`,
+                `${this.setNumber}세트는 ${this.teams[ti].name} 팀이 가져갑니다 (${this.points[0]}–${this.points[1]}). ${this.setNumber + 1}세트 전 짧은 휴식입니다.`,
                 true
               );
               // Move to benches during set break
@@ -3682,8 +3683,8 @@
         this.positionForServe();
         this.phase = 'preServe';
         this.phaseTimer = 1.0;
-        this.emit('onCaption', { main: `SET ${this.setNumber}`, sub: `TARGET ${this.getTargetScore()} POINTS` });
-        this.addCommentary(`Set ${this.setNumber} begins! ${this.teams[this.servingTeam].name} to serve.`, true);
+        this.emit('onCaption', { main: `${this.setNumber}세트`, sub: `목표 ${this.getTargetScore()}점` });
+        this.addCommentary(`${this.setNumber}세트 시작! ${this.teams[this.servingTeam].name} 팀의 서브입니다.`, true);
         this.emit('onUiDirty');
       }
 
@@ -3705,7 +3706,7 @@
             : (vc.contacts <= 1 ? 'serveErr' : 'attackOut');
 
           this.addCommentary(
-            `CALL OVERTURNED! Video Check proves the ball was ${vc.trueIn ? 'IN' : 'OUT'}! ${chTeam.code} retain their challenge.`,
+            `판정 번복! 비디오 판독 결과 공은 ${vc.trueIn ? '인' : '아웃'}이었습니다! ${chTeam.code} 팀은 챌린지를 유지합니다.`,
             true
           );
           this.awardPoint(trueWinner, trueReason, vc.lastHitter, {
@@ -3721,7 +3722,7 @@
         } else {
           chTeam.challengesLeft = Math.max(0, chTeam.challengesLeft - 1);
           this.addCommentary(
-            `CALL STANDS! Video Check confirms ${vc.trueIn ? 'IN' : 'OUT'}. ${chTeam.code} lose a challenge (${chTeam.challengesLeft} left).`,
+            `판정 유지! 비디오 판독 결과 ${vc.trueIn ? '인' : '아웃'}이 확인되었습니다. ${chTeam.code} 팀은 챌린지를 하나 잃습니다 (${chTeam.challengesLeft}회 남음).`,
             true
           );
           this.phase = 'challenge';
@@ -3774,7 +3775,7 @@
             this.positionForServe();
             this.phase = 'preServe';
             this.phaseTimer = 0.8;
-            this.emit('onCaption', { main: 'SET 1', sub: `${this.teams[this.servingTeam].code} TO SERVE` });
+            this.emit('onCaption', { main: '1세트', sub: `${this.teams[this.servingTeam].code} 서브` });
             this.emit('onUiDirty');
           }
           return;
@@ -4231,10 +4232,10 @@
 
       // Apron text
       g.fillStyle = 'rgba(250, 245, 235, 0.72)';
-      g.font = '800 22px "Barlow Condensed", sans-serif';
+      g.font = '800 22px "Barlow Condensed", "Noto Sans KR", "Malgun Gothic", sans-serif';
       g.textAlign = 'center';
-      g.fillText('LIGHTHOUSE CUP  ·  MARLOWE ARENA', wx(0), wz(6.15));
-      g.fillText('GRAND FINAL', wx(0), wz(-5.75));
+      g.fillText('라이트하우스 컵  ·  말로우 아레나', wx(0), wz(6.15));
+      g.fillText('결승전', wx(0), wz(-5.75));
 
       const tex = new THREE.CanvasTexture(c);
       tex.minFilter = THREE.NearestFilter;
@@ -4285,7 +4286,7 @@
       g.fillRect(244, 0, 12, 64);
       g.fillRect(12, 56, 232, 8);
       g.fillStyle = sp.fg;
-      g.font = '800 26px "Barlow Condensed", sans-serif';
+      g.font = '800 26px "Barlow Condensed", "Noto Sans KR", "Malgun Gothic", sans-serif';
       g.textAlign = 'center';
       g.textBaseline = 'middle';
       g.fillText(sp.name, 128, 30);
@@ -5302,19 +5303,19 @@
         g.fillStyle = '#E85A1B';
         g.fillRect(0, 0, 512, 34);
         g.fillStyle = '#FCF9F2';
-        g.font = '800 22px "Barlow Condensed", sans-serif';
+        g.font = '800 22px "Barlow Condensed", "Noto Sans KR", "Malgun Gothic", sans-serif';
         g.textAlign = 'center';
-        g.fillText(`LIGHTHOUSE CUP  ·  SET ${this.engine.setNumber}`, 256, 24);
+        g.fillText(`라이트하우스 컵  ·  ${this.engine.setNumber}세트`, 256, 24);
 
         // Team 0
         g.fillStyle = t0.jersey;
         g.fillRect(18, 52, 18, 56);
         g.fillStyle = '#FCF9F2';
-        g.font = '800 44px "Barlow Condensed", sans-serif';
+        g.font = '800 44px "Barlow Condensed", "Noto Sans KR", "Malgun Gothic", sans-serif';
         g.textAlign = 'left';
         g.fillText(t0.code, 48, 96);
         g.fillStyle = '#F5D24E';
-        g.font = '800 68px "Barlow Condensed", sans-serif';
+        g.font = '800 68px "Barlow Condensed", "Noto Sans KR", "Malgun Gothic", sans-serif';
         g.textAlign = 'center';
         g.fillText(String(this.engine.points[0]).padStart(2, '0'), 182, 106);
 
@@ -5322,15 +5323,15 @@
         g.fillStyle = '#1B3052';
         g.fillRect(224, 52, 64, 58);
         g.fillStyle = '#FCF9F2';
-        g.font = '800 32px "Barlow Condensed", sans-serif';
+        g.font = '800 32px "Barlow Condensed", "Noto Sans KR", "Malgun Gothic", sans-serif';
         g.fillText(`${this.engine.setsWon[0]}-${this.engine.setsWon[1]}`, 256, 92);
 
         // Team 1
         g.fillStyle = '#F5D24E';
-        g.font = '800 68px "Barlow Condensed", sans-serif';
+        g.font = '800 68px "Barlow Condensed", "Noto Sans KR", "Malgun Gothic", sans-serif';
         g.fillText(String(this.engine.points[1]).padStart(2, '0'), 330, 106);
         g.fillStyle = '#FCF9F2';
-        g.font = '800 44px "Barlow Condensed", sans-serif';
+        g.font = '800 44px "Barlow Condensed", "Noto Sans KR", "Malgun Gothic", sans-serif';
         g.textAlign = 'right';
         g.fillText(t1.code, 464, 96);
         g.fillStyle = t1.jersey;
@@ -5340,9 +5341,9 @@
         g.fillStyle = '#1B3052';
         g.fillRect(16, 136, 480, 40);
         g.fillStyle = '#FF9452';
-        g.font = '700 22px "Barlow Condensed", sans-serif';
+        g.font = '700 22px "Barlow Condensed", "Noto Sans KR", "Malgun Gothic", sans-serif';
         g.textAlign = 'center';
-        const flag = this.engine.getPointFlag() || 'MARLOWE ARENA · GRAND FINAL';
+        const flag = this.engine.getPointFlag() || '말로우 아레나 · 결승전';
         g.fillText(flag, 256, 164);
 
         this.sbTex.needsUpdate = true;
@@ -5664,10 +5665,10 @@
         const ov = $('videoCheckOverlay');
         if (vc) {
           ov.classList.add('visible');
-          $('vcSubLabel').textContent = `${vc.lineType} · ${engine.teams[vc.challengingTeam].code} CHALLENGE`;
+          $('vcSubLabel').textContent = `${vc.lineType === 'ENDLINE' ? '엔드라인' : '사이드라인'} · ${engine.teams[vc.challengingTeam].code} 챌린지`;
           const vEl = $('vcVerdict');
           vEl.className = 'vc-verdict';
-          vEl.textContent = 'TRACKING BALL...';
+          vEl.textContent = '공 추적 중...';
         } else {
           ov.classList.remove('visible');
         }
@@ -5726,12 +5727,12 @@
 
       // Subtle camera scanlines & labels
       g.fillStyle = 'rgba(11, 19, 36, 0.72)';
-      g.font = '800 13px "Barlow Condensed", sans-serif';
+      g.font = '800 13px "Barlow Condensed", "Noto Sans KR", "Malgun Gothic", sans-serif';
       g.textAlign = 'left';
-      g.fillText('IN COURT', 12, 20);
+      g.fillText('코트 안', 12, 20);
       g.fillStyle = 'rgba(250, 245, 235, 0.85)';
       g.textAlign = 'right';
-      g.fillText('OUT ZONE', W - 12, 20);
+      g.fillText('코트 밖', W - 12, 20);
 
       // Compute exact offset in metres from outer chalk edge (+ = OUT, - = IN)
       const signedM = vc.lineType === 'ENDLINE'
@@ -5774,9 +5775,9 @@
         g.fillStyle = '#0B1324';
         g.fillRect(impactX - 42, impactY + 18, 84, 20);
         g.fillStyle = '#FCF9F2';
-        g.font = '800 13px "Barlow Condensed", sans-serif';
+        g.font = '800 13px "Barlow Condensed", "Noto Sans KR", "Malgun Gothic", sans-serif';
         g.textAlign = 'center';
-        g.fillText(`${mm} MM ${vc.trueIn ? 'IN' : 'OUT'}`, impactX, impactY + 32);
+        g.fillText(`${mm} MM ${vc.trueIn ? '인' : '아웃'}`, impactX, impactY + 32);
       }
 
       // Moving volleyball graphic
@@ -5794,7 +5795,7 @@
         const vEl = $('vcVerdict');
         const overturned = vc.trueIn !== vc.calledIn;
         vEl.className = 'vc-verdict ' + (vc.trueIn ? 'in' : 'out');
-        vEl.textContent = `${vc.trueIn ? 'IN' : 'OUT'} · ${overturned ? 'CALL OVERTURNED!' : 'CALL STANDS'}`;
+        vEl.textContent = `${vc.trueIn ? '인' : '아웃'} · ${overturned ? '판정 번복!' : '판정 유지'}`;
       }
     }
 
@@ -5815,13 +5816,13 @@
         html += `<div class="${cls.join(' ')}" title="P${slot + 1}: #${p.number} ${p.name} (${p.pos})">${lbl}</div>`;
       }
       grid.innerHTML = html;
-      $(`rotLbl${teamIdx}`).textContent = `${t.code} ROT`;
+      $(`rotLbl${teamIdx}`).textContent = `${t.code} 로테이션`;
     }
 
     // Render substitution chips for user's coached team
     function renderSubChips() {
       const t = engine.teams[engine.userTeam];
-      $('lblSubCount').textContent = `${t.subsLeft} / 2 LEFT${t.pendingSub ? ' (QUEUED)' : ''}`;
+      $('lblSubCount').textContent = `${t.subsLeft} / 2 남음${t.pendingSub ? ' (대기 중)' : ''}`;
 
       const courtBox = $('subCourtChips');
       const benchBox = $('subBenchChips');
@@ -5854,12 +5855,12 @@
       arena.updateHallScoreboard();
 
       // Header lines
-      $('hdrMatchLine').textContent = `${t0.name} vs ${t1.name} · ${engine.format.label}`;
-      $('hdrLeagueLine').textContent = `${engine.league.name} · Net ${engine.league.netHeight.toFixed(2)} m · Seeded Roster`;
+      $('hdrMatchLine').textContent = `${t0.name} 대 ${t1.name} · ${engine.format.label}`;
+      $('hdrLeagueLine').textContent = `${engine.league.name} · 네트 ${engine.league.netHeight.toFixed(2)} m · 고정 시드 로스터`;
       $('lblFormatShort').textContent = engine.format.short;
 
       // HUD Bug
-      $('hudSetLabel').textContent = `SET ${engine.setNumber} · ${engine.format.short}`;
+      $('hudSetLabel').textContent = `${engine.setNumber}세트 · ${engine.format.short}`;
       const flag = engine.getPointFlag();
       const flagEl = $('hudPointFlag');
       flagEl.textContent = flag;
@@ -5881,11 +5882,11 @@
 
       // State chips
       const stChip = $('chipState');
-      stChip.textContent = engine.paused ? 'PAUSED' : engine.phase === 'matchOver' ? 'FINAL' : 'LIVE';
+      stChip.textContent = engine.paused ? '일시정지' : engine.phase === 'matchOver' ? '종료' : '생중계';
       stChip.classList.toggle('live', !engine.paused && engine.phase !== 'matchOver');
       $('chipSpeed').textContent = `${engine.speed}×`;
-      const camNames = { follow: 'TV FOLLOW', hall: 'WHOLE HALL', closeup: 'CLOSE-UP' };
-      $('chipCam').textContent = camNames[arena.camMode] || 'TV FOLLOW';
+      const camNames = { follow: 'TV 추적', hall: '경기장 전체', closeup: '근접' };
+      $('chipCam').textContent = camNames[arena.camMode] || 'TV 추적';
 
       // Bottom commentary strip
       if (engine.commentary.length > 0) {
@@ -5894,11 +5895,11 @@
       }
 
       // Match Controls coach buttons
-      $('btnCoach0').textContent = `Home (${t0.code})`;
-      $('btnCoach1').textContent = `Away (${t1.code})`;
+      $('btnCoach0').textContent = `홈 (${t0.code})`;
+      $('btnCoach1').textContent = `원정 (${t1.code})`;
       $('btnCoach0').classList.toggle('active', engine.userTeam === 0);
       $('btnCoach1').classList.toggle('active', engine.userTeam === 1);
-      $('btnPause').textContent = engine.paused ? 'Resume' : 'Pause';
+      $('btnPause').textContent = engine.paused ? '재개' : '일시정지';
       $('btnSkipCeremony').disabled = !(engine.phase === 'ceremony' || engine.phase === 'setBreak' || engine.phase === 'timeout');
 
       // Coach Panel
@@ -5906,18 +5907,18 @@
       $('lblCoachTeam').textContent = ut.name.toUpperCase();
       $('lblServeDesc').textContent = SERVE_TACTICS[ut.tactics.serve].desc;
       $('lblAttackDesc').textContent = ATTACK_TACTICS[ut.tactics.attack].desc;
-      $('lblBlockDesc').textContent = ut.tactics.block.toUpperCase();
+      $('lblBlockDesc').textContent = ({ read: '리드', commit: '커밋' }[ut.tactics.block] || ut.tactics.block);
 
       document.querySelectorAll('#serveTacticGroup button').forEach(b => b.classList.toggle('active', b.dataset.serve === ut.tactics.serve));
       document.querySelectorAll('#attackTacticGroup button').forEach(b => b.classList.toggle('active', b.dataset.attack === ut.tactics.attack));
       document.querySelectorAll('#blockTacticGroup button').forEach(b => b.classList.toggle('active', b.dataset.block === ut.tactics.block));
 
-      $('btnTimeout').textContent = ut.timeoutQueued ? `Timeout Queued` : `Timeout (T) · ${ut.timeoutsLeft}`;
+      $('btnTimeout').textContent = ut.timeoutQueued ? `타임아웃 대기 중` : `타임아웃 (T) · ${ut.timeoutsLeft}`;
       $('btnTimeout').disabled = ut.timeoutsLeft <= 0 || ut.timeoutQueued || engine.phase === 'matchOver';
-      $('lblChalCount').textContent = `Challenges: ${ut.challengesLeft}/2`;
+      $('lblChalCount').textContent = `챌린지: ${ut.challengesLeft}/2`;
       $('lblAimStatus').textContent = ut.aimTarget
-        ? `Locked aim: (${ut.aimTarget.x.toFixed(1)}m, ${ut.aimTarget.z.toFixed(1)}m)`
-        : 'Next aim: Auto tactical';
+        ? `조준 고정: (${ut.aimTarget.x.toFixed(1)}m, ${ut.aimTarget.z.toFixed(1)}m)`
+        : '다음 조준: 자동 전술';
       $('btnAim').classList.toggle('active', arena.aimMode);
 
       renderSubChips();
@@ -5927,20 +5928,20 @@
       rb.classList.toggle('finished', engine.phase === 'matchOver');
       if (engine.phase === 'matchOver') {
         const w = engine.teams[engine.winnerTeam];
-        $('resultBannerMain').textContent = `${w.name.toUpperCase()} WIN THE LIGHTHOUSE CUP!`;
-        $('resultBannerSub').textContent = `Final Score: ${t0.code} ${engine.setsWon[0]} – ${engine.setsWon[1]} ${t1.code} (${engine.setScores.map(s => `${s[0]}–${s[1]}`).join(', ')})`;
-        $('resultBannerBadge').textContent = `FINAL ${engine.setsWon[0]}—${engine.setsWon[1]}`;
+        $('resultBannerMain').textContent = `${w.name.toUpperCase()} 라이트하우스 컵 우승!`;
+        $('resultBannerSub').textContent = `최종 스코어: ${t0.code} ${engine.setsWon[0]} – ${engine.setsWon[1]} ${t1.code} (${engine.setScores.map(s => `${s[0]}–${s[1]}`).join(', ')})`;
+        $('resultBannerBadge').textContent = `최종 ${engine.setsWon[0]}—${engine.setsWon[1]}`;
       } else {
-        $('resultBannerMain').textContent = `${t0.name} vs ${t1.name} · Set ${engine.setNumber}`;
-        $('resultBannerSub').textContent = `${engine.league.name} · Serving: ${engine.teams[engine.servingTeam].name} · Target ${engine.getTargetScore()} pts`;
-        $('resultBannerBadge').textContent = `SETS ${engine.setsWon[0]}—${engine.setsWon[1]}`;
+        $('resultBannerMain').textContent = `${t0.name} 대 ${t1.name} · ${engine.setNumber}세트`;
+        $('resultBannerSub').textContent = `${engine.league.name} · 서브: ${engine.teams[engine.servingTeam].name} · 목표 ${engine.getTargetScore()}점`;
+        $('resultBannerBadge').textContent = `세트 ${engine.setsWon[0]}—${engine.setsWon[1]}`;
       }
 
       // Match Centre: Set-by-set table
       const maxCols = engine.format.maxSets;
-      let th = '<tr><th>Team</th>';
-      for (let s = 1; s <= maxCols; s++) th += `<th class="num">S${s}</th>`;
-      th += '<th class="num">Sets</th></tr>';
+      let th = '<tr><th>팀</th>';
+      for (let s = 1; s <= maxCols; s++) th += `<th class="num">${s}세트</th>`;
+      th += '<th class="num">세트</th></tr>';
       let rows = '';
       for (let ti = 0; ti < 2; ti++) {
         const tm = engine.teams[ti];
@@ -5956,17 +5957,17 @@
       $('setScoreTable').innerHTML = `<thead>${th}</thead><tbody>${rows}</tbody>`;
 
       // Match Centre: Comparison Stats
-      $('statTeamsHdr').textContent = `${t0.code} vs ${t1.code}`;
+      $('statTeamsHdr').textContent = `${t0.code} 대 ${t1.code}`;
       const s0 = t0.stats, s1 = t1.stats;
       const pct = (sum, cnt) => cnt > 0 ? Math.round((sum / cnt) * 100) : 0;
       const statItems = [
-        { label: 'Aces',        v0: s0.aces,   v1: s1.aces,   suffix: '' },
-        { label: 'Kills',       v0: s0.kills,  v1: s1.kills,  suffix: '' },
-        { label: 'Blocks',      v0: s0.blocks, v1: s1.blocks, suffix: '' },
-        { label: 'Errors',      v0: s0.errors, v1: s1.errors, suffix: '' },
-        { label: 'Serve Qual.', v0: pct(s0.serveQSum, s0.serves),     v1: pct(s1.serveQSum, s1.serves),     suffix: '%' },
-        { label: 'Rec. Qual.',  v0: pct(s0.receiveQSum, s0.receives), v1: pct(s1.receiveQSum, s1.receives), suffix: '%' },
-        { label: 'Side-Out',    v0: pct(s0.sideOuts, s0.sideOutOpps), v1: pct(s1.sideOuts, s1.sideOutOpps), suffix: '%' }
+        { label: '에이스',        v0: s0.aces,   v1: s1.aces,   suffix: '' },
+        { label: '킬',       v0: s0.kills,  v1: s1.kills,  suffix: '' },
+        { label: '블록',      v0: s0.blocks, v1: s1.blocks, suffix: '' },
+        { label: '범실',      v0: s0.errors, v1: s1.errors, suffix: '' },
+        { label: '서브 품질', v0: pct(s0.serveQSum, s0.serves),     v1: pct(s1.serveQSum, s1.serves),     suffix: '%' },
+        { label: '리시브 품질',  v0: pct(s0.receiveQSum, s0.receives), v1: pct(s1.receiveQSum, s1.receives), suffix: '%' },
+        { label: '사이드아웃',    v0: pct(s0.sideOuts, s0.sideOutOpps), v1: pct(s1.sideOuts, s1.sideOutOpps), suffix: '%' }
       ];
       $('comparisonStatsBox').innerHTML = statItems.map(it => {
         const tot = Math.max(1, it.v0 + it.v1);
@@ -5994,7 +5995,7 @@
             ${top.map(p => `
               <div class="perf-item">
                 <span><strong>#${p.number}</strong> ${p.shortName} <span style="color:var(--ink-muted);font-size:11px">${p.pos}</span></span>
-                <span class="condensed" style="font-weight:800">${p.stats.points}P · ${p.stats.kills}K · ${p.stats.blocks}B · ${p.stats.aces}A</span>
+                <span class="condensed" style="font-weight:800">${p.stats.points}점 · ${p.stats.kills}킬 · ${p.stats.blocks}블록 · ${p.stats.aces}에이스</span>
               </div>
             `).join('')}
           </div>`;
@@ -6011,7 +6012,7 @@
       // Match Centre: Rosters
       for (let ti = 0; ti < 2; ti++) {
         const tm = engine.teams[ti];
-        $(`rosterHdr${ti}`).textContent = `${tm.name} Roster (Coach: ${tm.coach})`;
+        $(`rosterHdr${ti}`).textContent = `${tm.name} 로스터 (감독: ${tm.coach})`;
         const onCourtSet = new Set(tm.courtRotation);
         const rRows = tm.players.map((p, idx) => {
           const onCourt = onCourtSet.has(idx);
@@ -6021,8 +6022,8 @@
               <td class="num">${p.number}</td>
               <td>
                 <strong>${p.name}</strong>
-                ${p.isLibero ? '<span class="badge badge-lib" style="margin-left:4px">LIBERO</span>' : ''}
-                ${onCourt ? '<span class="badge badge-court" style="margin-left:4px">ON COURT</span>' : ''}
+                ${p.isLibero ? '<span class="badge badge-lib" style="margin-left:4px">리베로</span>' : ''}
+                ${onCourt ? '<span class="badge badge-court" style="margin-left:4px">출전 중</span>' : ''}
               </td>
               <td class="num">${p.pos}</td>
               <td><span class="stam-mini"><span style="width:${Math.round(p.stamina)}%;background:${stamColor}"></span></span></td>
@@ -6031,7 +6032,7 @@
             </tr>`;
         }).join('');
         $(`rosterTable${ti}`).innerHTML = `
-          <thead><tr><th class="num">#</th><th>Player</th><th class="num">Pos</th><th>Stam</th><th class="num">Pts</th><th class="num">K/B/A</th></tr></thead>
+          <thead><tr><th class="num">#</th><th>선수</th><th class="num">포지션</th><th>체력</th><th class="num">득점</th><th class="num">킬/블록/에이스</th></tr></thead>
           <tbody>${rRows}</tbody>`;
       }
     }
@@ -6061,7 +6062,7 @@
       const tb = $('timeoutBanner');
       if (engine.phase === 'timeout' && engine.timeoutInfo) {
         tb.classList.add('visible');
-        $('timeoutBannerText').textContent = `TIMEOUT · ${engine.teams[engine.timeoutInfo.team].name.toUpperCase()}`;
+        $('timeoutBannerText').textContent = `타임아웃 · ${engine.teams[engine.timeoutInfo.team].name.toUpperCase()}`;
         $('timeoutCountdown').textContent = `${Math.max(0, engine.phaseTimer).toFixed(1)}s`;
       } else {
         tb.classList.remove('visible');
@@ -6109,14 +6110,14 @@
 
     function setLightMode(mode) {
       arena.lightMode = mode;
-      $('lblLightMode').textContent = mode.toUpperCase();
+      $('lblLightMode').textContent = ({ day: '낮', evening: '저녁', show: '쇼' }[mode] || mode);
       document.querySelectorAll('#lightsGroup button').forEach(b => b.classList.toggle('active', b.dataset.light === mode));
     }
 
     function setFloorMode(mode) {
       engine.setFloor(mode);
       arena.updateFloorTexture();
-      $('lblFloorMode').textContent = FLOOR_TYPES[mode].label.toUpperCase();
+      $('lblFloorMode').textContent = FLOOR_TYPES[mode].label;
       document.querySelectorAll('#floorGroup button').forEach(b => b.classList.toggle('active', b.dataset.floor === mode));
     }
 
@@ -6129,7 +6130,7 @@
     // Header buttons
     $('btnSound').addEventListener('click', () => {
       const on = soundFX.toggle();
-      $('btnSound').textContent = on ? 'Sound: On' : 'Sound: Off';
+      $('btnSound').textContent = on ? '사운드: 켜짐' : '사운드: 꺼짐';
       $('btnSound').classList.toggle('active', on);
       if (on) soundFX.playWhistle(false);
     });
@@ -6138,7 +6139,7 @@
       const html = document.documentElement;
       const isDark = html.getAttribute('data-theme') === 'dark';
       html.setAttribute('data-theme', isDark ? 'light' : 'dark');
-      $('btnTheme').textContent = isDark ? 'Evening Hall' : 'Maple Paper';
+      $('btnTheme').textContent = isDark ? '저녁 경기장' : '메이플 페이퍼';
     });
 
     // Match controls
@@ -6325,7 +6326,7 @@
           if (okSide && Math.abs(hit.x) <= 9.2 && Math.abs(hit.z) <= 4.7) {
             engine.setAimTarget(engine.userTeam, hit.x, hit.z);
             setAimMode(false);
-            showCaption('AIM LOCKED', 'NEXT SERVE / ATTACK TARGETED');
+            showCaption('조준 고정', '다음 서브 / 공격 목표 지정');
           }
         }
       }
